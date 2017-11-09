@@ -15,7 +15,7 @@ RUN composer create-project openfed/openfed8-project:^1.0 openfed --no-interacti
 
 WORKDIR /var/www/html
 RUN chown -R www-data:www-data /usr/src/openfed
-# COPY .htaccess /usr/src/openfed/docroot
+COPY .htaccess /usr/src/openfed/docroot
 
 COPY docker-openfed-entrypoint.sh /docker-entrypoint-init.d/
 
